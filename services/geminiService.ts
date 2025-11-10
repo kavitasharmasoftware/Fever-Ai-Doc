@@ -5,7 +5,8 @@ import type { PatientData, Candidate, FeverOrchestratorInput, FeverOrchestratorO
 // This ensures we're always using the latest configuration and API key,
 // and provides a Vercel-specific deployment tip in the error message.
 export const getAiClient = () => {
-    const apiKey = process.env.API_KEY;
+    // Prioritize the environment variable for Vercel compatibility, but use the provided key as a fallback.
+    const apiKey = process.env.API_KEY || "AIzaSyBIx-8mPlcEgjRYmWOVMqB9c9nVbPtsomw";
     if (!apiKey) {
         throw new Error("API_KEY environment variable not found. For Vercel deployment, please add API_KEY to your Project Settings > Environment Variables.");
     }
