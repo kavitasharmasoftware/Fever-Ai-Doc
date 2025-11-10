@@ -1,0 +1,9 @@
+{
+  "name": "FeverDoc-AI: Tropical Fever Triage",
+  "description": "An AI-powered triage expert for tropical fevers in rural India, providing rapid diagnosis and actionable advice for healthcare workers. Built by Micro Labs Hackathon 2025 winners.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
